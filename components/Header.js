@@ -38,15 +38,15 @@ export default function Header ({ navBarTitle, fullWidth }) {
 
   // Favicon
 
-  // const resolveFavicon = fallback => !fallback && dark ? '/favicon.dark.png' : '/favicon.png'
-  // const [favicon, _setFavicon] = useState(resolveFavicon())
-  // const setFavicon = fallback => _setFavicon(resolveFavicon(fallback))
+  const resolveFavicon = fallback => !fallback && dark ? '/favicon.dark.png' : '/favicon.png'
+  const [favicon, _setFavicon] = useState(resolveFavicon())
+  const setFavicon = fallback => _setFavicon(resolveFavicon(fallback))
 
-  // useEffect(
-  //   () => setFavicon(),
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  //   [dark]
-  // )
+  useEffect(
+    () => setFavicon(),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [dark]
+  )
 
   const useSticky = !BLOG.autoCollapsedNavBar
   const navRef = useRef(/** @type {HTMLDivElement} */ undefined)
