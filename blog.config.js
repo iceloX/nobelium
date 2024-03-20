@@ -17,8 +17,8 @@ const BLOG = {
   showAbout: true,
   showArchive: true,
   autoCollapsedNavBar: false, // The automatically collapsed navigation bar
-  ogImageGenerateURL: 'https://og-image-craigary.vercel.app', // The link to generate OG image, don't end with a slash
-  socialLink: 'https://github.com/iceloX',
+  ogImageGenerateURL: '', // The link to generate OG image, don't end with a slash
+  socialLink: '/about',
   seo: {
     keywords: ['冰洛', 'icelo'],
     googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
