@@ -11,7 +11,7 @@ const NavBar = () => {
   const links = [
     { id: 0, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
     { id: 1, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
-    { id: 2, name: locale.NAV.FRIEND, to: '/link', show: true, external: true },
+    { id: 2, name: locale.NAV.FRIEND, to: '/links', show: true, external: true },
   ]
   return (
     <div className="flex-shrink-0">
@@ -38,15 +38,15 @@ export default function Header ({ navBarTitle, fullWidth }) {
 
   // Favicon
 
-  const resolveFavicon = fallback => !fallback && dark ? '/favicon.dark.png' : '/favicon.png'
-  const [favicon, _setFavicon] = useState(resolveFavicon())
-  const setFavicon = fallback => _setFavicon(resolveFavicon(fallback))
+  // const resolveFavicon = fallback => !fallback && dark ? '/favicon.dark.png' : '/favicon.png'
+  // const [favicon, _setFavicon] = useState(resolveFavicon())
+  // const setFavicon = fallback => _setFavicon(resolveFavicon(fallback))
 
-  useEffect(
-    () => setFavicon(),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [dark]
-  )
+  // useEffect(
+  //   () => setFavicon(),
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  //   [dark]
+  // )
 
   const useSticky = !BLOG.autoCollapsedNavBar
   const navRef = useRef(/** @type {HTMLDivElement} */ undefined)
